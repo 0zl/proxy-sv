@@ -104,11 +104,9 @@ class Stellar {
 
             this.status.res++
             
-            const responseBody = JSON.parse(response.body)
             res.json({
                 success: response.headers['x-success'],
-                headers: responseBody.headers,
-                body: JSON.parse(responseBody.body)
+                data: response.body
             })
         })
 

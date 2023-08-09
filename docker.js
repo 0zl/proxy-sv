@@ -46,5 +46,7 @@ express()
         }
     })
 
+    .get('/t', (_, res) => res.end('meow?'))
+
     .all('*', (_, res) => res.end('Stellar.'))
     .listen(7860, _ => console.log('Stellar Online.'))
