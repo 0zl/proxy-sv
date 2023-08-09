@@ -1,0 +1,16 @@
+{
+  "name": "proxy-sv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "xdke",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fastq": "^1.15.0",
+    "got": "11",
+    "yaml": "^2.3.1"
+  }
+}
