@@ -61,6 +61,16 @@ class Stellar {
         return response
     }
 
+    async pingEndpoints() {
+        for ( const endpoint of this.endpoints ) {
+            try {
+                await got(endpoint.endpoint)
+            } catch (err) {
+                console.error(err)
+            }
+        }
+    }
+
     startServer() {
         const secretHeader = this.conf.apiSecret.headers
         const secretKeys = this.conf.apiSecret.keys
@@ -120,6 +130,8 @@ class Stellar {
 function main() {
     const stellar = new Stellar()
     stellar.startServer()
+
+    setInterval(() => stellar.pingEndpoints(), 1000 * 60 * 5) // 5 minutes
 }
 
 main()
