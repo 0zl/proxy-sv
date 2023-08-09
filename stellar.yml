@@ -8,4 +8,4 @@ queue:
   max: 2
 
 endpoints:
-  - https://zwv9-stellis-caelum-orbis.hf.space/
+  - http://127.0.0.1:7860

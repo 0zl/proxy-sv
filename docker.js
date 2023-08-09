@@ -11,7 +11,7 @@ async function redirectRequest(method, url, headers, data) {
     return await got(url, {
         headers: headers,
         method: method,
-        body: String(data),
+        json: data,
         throwHttpErrors: true
     })
 }
